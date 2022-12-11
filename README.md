@@ -141,3 +141,6 @@ cordova run android
 
 ## 자기소개 화면
 <img src="/img/my.png" width="203px" height="403px" title="테스트" alt="my"></img><br/>
+
+## 회사소개
+<img src="/img/pj.png" width="203px" height="403px" title="테스트" alt="my"></img><br/>

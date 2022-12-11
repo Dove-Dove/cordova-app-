@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>jQuery Mobile</title>
+    <link rel="stylesheet" href="./css/jquery.mobile-1.4.5.min.css">
+    <script src="./js/jquery-1.11.1.min.js"></script>
+    <script src="./js/jquery.mobile-1.4.5.min.js"></script>
+
+    <style>
+        #home {
+            background-color: #363636;
+        }
+
+        .fimg {
+            width: 35%;
+            height: 35%;
+            animation: fimg 3s;
+            -moz-animation: fimg 3s;
+            -webkit-animation: fimg 3s;
+            -o-animation: 3s;
+        }
+
+        @keyframes fimg {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @-moz-keyframes fimg {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @-webkit-keyframes fimg {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @-o-keyframes fimg { /* Opera */
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        #mainli {
+            float: left;
+            margin-left: 5%;
+            width: 200px;
+            text-align: center;
+            display: table;
+        }
+
+        .picture {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+            .picture li {
+                float: left;
+                width: 50%;
+            }
+
+                .picture li a {
+                    display: block;
+                    margin: 50px;
+                    border: 1px
+                }
+
+                .picture li img {
+                    display: block;
+                    width: 50%;
+                    height: auto;
+                }
+
+                    .picture li img:hover {
+                        display: block;
+                        width: 100%;
+                        height: auto;
+                    }
+    </style>
+</head>
+<body>
+<div datadata-theme="b" >
+  <div data-role="page" id="home">
+		<div data-role="header" data-theme="b">
+			<h1>프로젝트 문</h1>
+		</div>
+		<div data-role="content" style="text-align:center">
+			<img class="fimg"src="img/pm.jpg" >
+			<ul data-role="listview" >
+				<li id="mainli"><a href="#intro">회사 소개</a></li>
+				<li id="mainli"><a href="#movie" data-rel="dialog">영상</a></li>
+				<li id="mainli"><a href="#gallery">사진</a></li>
+			</ul>
+		</div>
+	</div>
+  <div data-role="page" id="intro" data-theme="b">
+    <div data-role="header" data-theme="b">
+        <a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>			
+        <h1>회사 소개</h1>
+    </div>
+    <div data-role="content">
+            <div  style="text-align:center">
+                <img src="img/pm.jpg">
+            </div>			
+        <div data-role="collapsible-set" data-theme="b" data-content-theme="e">
+            <div data-role="collapsible" data-collapsed="false">
+                <h3>개요</h3>
+                <p>대한민국의 인디 게임 개발사. 총괄 디렉터는 김지훈. 로고는 문(moon)과 문(door)의 문고리를 합친 듯한 중의적인 디자인이다.과학 기술의 과도한 발전으로 도덕과 인권이 바닥으로 추락한 디스토피아 세계관을 무대로 작품 전반에 염세적인 맛이 강하지만 동시에 과오를 바로잡고 올바르게 나아갈 수 있다는 희망을 담은 인간찬가를 그리고 있다.</p>
+            </div>
+            <div data-role="collapsible">
+                <h3>출시 게임</h3>
+                <p>Lobotomy Corporation ,Library of Ruina </p>
+            </div>
+            <div data-role="collapsible"  >
+                <h3>위치</h3>
+                <div class ="map" id ="inf">
+                    <p>	경기 수원시 영통구 법조로 25광교 SK VIEW Lake 오피스텔</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12697.233438885218!2d127.060915!3d37.287825!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa2c9beb6a1f23c4d!2z6rSR6rWQU0vrt7DroIjsnbTtgaztg4Dsm4wg7Jik7ZS87Iqk7YWU!5e0!3m2!1sko!2skr!4v1664609756952!5m2!1sko!2skr" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>	
+    </div>
+    <div data-role="page" id="movie" data-theme="b">
+        <div data-role="header" data-position="fixed" data-theme="b">
+            <h1>pv영상</h1>
+        </div>
+        <div data-role="content" >
+            <div class="ui-bar ui-bar-a">라이브러리 오브 루이나 pv</div><br/>
+            <iframe width="100%" height="240" src="https://www.youtube.com/embed/ofmYqXfjFs8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/>
+        </div>
+        <div data-role="footer" data-theme="b">
+        </div>
+    </div>
+
+    <div data-role="page" id="gallery"  data-theme="b">
+        <div data-role="header" data-position="fixed"  data-theme="b">
+            <a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>
+            <h1>PM 갤러리</h1>
+        </div>
+        <div data-role="content">
+            <ul class="picture">
+                <li><a href="img/4-1.jpg" rel="external"><img src="img/4-1.jpg" /></a></li>	
+                <li><a href="img/4-2.jpg" rel="external"><img src="img/4-2.jpg" /></a></li>	
+                <li><a href="img/4-3.jpg" rel="external"><img src="img/4-3.jpg" /></a></li>	
+                <li><a href="img/4-4.jpg" rel="external"><img src="img/4-4.jpg" /></a></li>	
+            </ul>
+        </div>
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <h1>프로젝트 문</h1>
+        </div>		
+    </div>
+</div>
+</body>
+</html>
